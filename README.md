@@ -13,7 +13,7 @@ This project conaints all the information that describes the tables and fields o
 
 
 | Field                       | Type                                      | Null | Key | Default | Extra          |
-|-----------------------------|-------------------------------------------|------|-----|---------+----------------|
+| --------------------------- | ----------------------------------------- |----- |---- | ------- | -------------- |
 | autoProcScalingStatisticsId | int(10) unsigned                          | NO   | PRI | NULL    | auto_increment |
 | autoProcScalingId           | int(10) unsigned                          | YES  | MUL | NULL    |                |
 | scalingStatisticsType       | enum('overall','innerShell','outerShell') | NO   | MUL | overall |                |
