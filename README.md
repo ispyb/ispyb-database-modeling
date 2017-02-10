@@ -51,6 +51,25 @@ One or several subtractions might have got one Abinitio models if the data analy
 | comments                       || varchar(512) | YES  |     | NULL    |                |
 | creationTime                   || datetime     | YES  |     | NULL    |                |
 
+### PhasingStep
+
+New PhasingStepTypes: REFINEMENT and LIGAND_FIT
+
+| Field                 | Type                                                                                            | Null | Key | Default           | Extra          |
+| --------------------- | ------------------------------------------------ | ---- | --- | ------- | ----- |
+| phasingStepId         | int(10) unsigned                                                                                | NO   | PRI | NULL              | auto_increment |
+| previousPhasingStepId | int(10) unsigned                                                                                | YES  |     | NULL              |                |
+| programRunId          | int(10) unsigned                                                                                | YES  | MUL | NULL              |                |
+| spaceGroupId          | int(10) unsigned                                                                                | YES  | MUL | NULL              |                |
+| autoProcScalingId     | int(10) unsigned                                                                                | YES  | MUL | NULL              |                |
+| phasingAnalysisId     | int(10) unsigned                                                                                | YES  | MUL | NULL              |                |
+| phasingStepType       | enum('PREPARE','SUBSTRUCTUREDETERMINATION','PHASING','MODELBUILDING','REFINEMENT','LIGAND_FIT') | YES  |     | NULL              |                |
+| method                | varchar(45)                                                                                     | YES  |     | NULL              |                |
+| solventContent        | varchar(45)                                                                                     | YES  |     | NULL              |                |
+| enantiomorph          | varchar(45)                                                                                     | YES  |     | NULL              |                |
+| lowRes                | varchar(45)                                                                                     | YES  |     | NULL              |                |
+| highRes               | varchar(45)                                                                                     | YES  |     | NULL              |                |
+| recordTimeStamp       | timestamp                                                                                       | NO   |     | CURRENT_TIMESTAMP |                |
 
 
 
